@@ -2,7 +2,7 @@ from animal import Animal
 
 class Cachorro(Animal):
 
-    def __init__(self, id_animal, nome, idade, sexo, raca):
+    def __init__(self, id_animal: int, nome: str, idade: int, sexo: str, raca: str):
         super().__init__(id_animal, nome, idade, sexo)
         self.__raca = raca
 

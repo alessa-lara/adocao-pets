@@ -1,23 +1,29 @@
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from animal import Animal
+    from solicitacao_adocao import SolicitacaoAdocao
+
 class Abrigo:
 
     __instancia = None
 
-    def __new__(cls, nome):
+    def __new__(cls, nome: str):
         if cls.__instancia is None:
             cls.__instancia = super().__new__(cls)
         return cls.__instancia
 
-    def __init__(self, nome):
+    def __init__(self, nome: str):
         if not hasattr(self, "_inicializado"):
-            self.__nome = nome
-            self.__animais = []
-            self.__solicitacoes = []
-            self._inicializado = True
+            self.__nome: str = nome
+            self.__animais: list[Animal] = []
+            self.__solicitacoes: list[SolicitacaoAdocao] = []
+            self._inicializado: bool = True
 
-    def cadastrar_animal(self, animal):
+    def cadastrar_animal(self, animal: Animal):
         self.__animais.append(animal)
 
-    def cadastrar_solicitacao(self, solicitacao):
+    def cadastrar_solicitacao(self, solicitacao: SolicitacaoAdocao):
         self.__solicitacoes.append(solicitacao)
 
     def listar_animais(self):

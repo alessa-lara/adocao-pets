@@ -4,7 +4,7 @@ from gato import Gato
 class AnimalFactory:
 
     @staticmethod
-    def criar_animal(tipo, *args):
+    def criar_animal(tipo: str, *args):
 
         if tipo.lower() == "cachorro":
             return Cachorro(*args)
