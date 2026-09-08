@@ -1,0 +1,25 @@
+cadastrar: cachorro / gato
+- nome: str
+- idade: int
+- sexo: str
+- raca / pelagem: str
+
+listar animais
+- cada linha um pet
+
+cadastrar adotante:
+- nome: str
+- cpf: str
+- telefone: str
+
+cadastrar solicitacao:
+- selecionar animal: listbox || combobox
+- selecionar adotante: listbox || combobox 
+- enviar: button(abrigo.cadastrar_solicitacao)
+
+listar solicitacao:
+- selecionar solicitacao: listbox || combobox
+- status da solicitacao
+- se o status for "pendente", podemos habilitar uma caixa para aprovar / reprovar solicitacao
+    - adicionar uma botao de enviar ao lado da caixa 
+    - outra opcao seriam 2 caixas lado a lado para aprovra ou rejeitar a solicitacao
